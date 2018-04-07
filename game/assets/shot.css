@@ -1,0 +1,104 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+body {
+  background-color: #eee;
+  color: white;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: steelblue;
+}
+
+.lang {
+  align-self: flex-end;
+}
+
+.lang button {
+  border: none;
+  width: 40px;
+  height: 25px;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.options, .main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.option, #roll {
+  min-width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  width: 30%;
+  margin: 5px auto;
+  transition: background 0.4s;
+}
+
+.option:nth-child(odd) {
+  background-color: steelblue;
+}
+
+.option:nth-child(even) {
+  background-color: #232323;
+}
+
+#roll {
+  margin: 15px auto;
+  background-color: red;
+  color: inherit;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#roll:disabled {
+  cursor: not-allowed;
+}
+
+#selected {
+  background-color: red;
+}
+
+h1 {
+  color: white;
+  
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.11;
+  padding: 10px 0;
+  font-weight: normal;
+  min-width: 150px;
+}
+
+@media (max-height: 520px) {
+  .option, #roll {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (min-height: 600px) {
+  .option, #roll {
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-height: 700px) {
+  .option, #roll {
+    height: 70px;
+    line-height: 70px;
+  }
+}

@@ -4,16 +4,16 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: #e1e8f0;
   color: white;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  background-color: steelblue;
+  background-color: #9068be;
 }
 
 .lang {
@@ -21,20 +21,29 @@ header {
 }
 
 .lang button {
+  background-color: #e1e8f0;
   border: none;
   width: 40px;
   height: 25px;
   margin: 5px 5px 0 0;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.options, .main {
+button.lang-active {
+  background-color: #ed5a5a;
+  color: white;
+}
+
+.options,
+.main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.option, #roll {
+.option,
+#roll {
   min-width: 150px;
   border-radius: 5px;
   text-align: center;
@@ -46,33 +55,47 @@ header {
 }
 
 .option:nth-child(odd) {
-  background-color: steelblue;
+  background-color: #9068be;
 }
 
 .option:nth-child(even) {
-  background-color: #232323;
+  background-color: #bbc4ef;
+  color: black;
 }
 
 #roll {
   margin: 15px auto;
-  background-color: red;
   color: inherit;
-  border: none;
   font-size: inherit;
   cursor: pointer;
+  border-style: solid;
+  border-width: 0px 0px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  color: #ffffff;
+  border-radius: 6px;
+  background-color: #ed5a5a;
+  border-color: #ea4343;
+}
+
+#roll:not(:disabled):hover {
+  background-color: #eb4848;
+  border-color: #e83131;
 }
 
 #roll:disabled {
   cursor: not-allowed;
+  background-color: pink;
+  border-color: #ebb6b6;
 }
 
 #selected {
-  background-color: red;
+  background-color: #ed5a5a;
+  color: white;
 }
 
 h1 {
   color: white;
-  
+
   text-align: center;
   margin: 0;
   text-transform: uppercase;
@@ -83,21 +106,24 @@ h1 {
 }
 
 @media (max-height: 520px) {
-  .option, #roll {
+  .option,
+  #roll {
     height: 40px;
     line-height: 40px;
   }
 }
 
 @media (min-height: 600px) {
-  .option, #roll {
+  .option,
+  #roll {
     height: 60px;
     line-height: 60px;
   }
 }
 
 @media (min-height: 700px) {
-  .option, #roll {
+  .option,
+  #roll {
     height: 70px;
     line-height: 70px;
   }
